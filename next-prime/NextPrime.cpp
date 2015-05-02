@@ -27,7 +27,7 @@ int main() {
         primes.pop();
 
         if ( primes.size() == 1 ) {
-            while ( primes.size() < 8 ) {
+            for ( int i = 0 ; i < 10 ; ++i ) {
                 currentElement = primes.back();
                 primes.push( findNextPrime( currentElement ) );
             }
