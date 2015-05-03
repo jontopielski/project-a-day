@@ -9,3 +9,7 @@ succession and stored in a buffer using a queue. Additionally, each prime checke
 5 x 20 [check 5 and 20]
 10 x 10 [check 10]
 20 x 5 [repeat check of both 20 and 5!!!]
+
+# Day 2 [5/2/2015]
+Had a late start today due to.. the Google Games!! It was a fun event put on by google and needless to say, I still have a lot more to learn about programming (and building towers with straws but thats a story for another day). Wow, this is turning into a blog now? I don't know how I feel about it.. Anyway! I tried to build a change giver that returns change from a given price and amount of money given. However, I've run into quite a bit of problems and less-than-ideal hard-coding
+approach to the change giving. I still need to work out the kinks but it's almost done.
