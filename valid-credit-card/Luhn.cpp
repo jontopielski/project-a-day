@@ -1,12 +1,7 @@
 #include <iostream>
 #include <string>
+#include "Luhn.hpp"
 using namespace std;
-
-string reverseString( string str );
-bool luhnsAlgo( string cardNum );
-bool isValid( string card );
-string multiplyOdds( string str );
-int addAllValues( string str );
 
 const int ASCII_ZERO = (int) '0';
 const int ASCII_NINE = (int) '9';
@@ -17,7 +12,12 @@ int main() {
     cin >> cardNumber;
 
     bool valid = isValid( cardNumber );
-
+    if ( valid ) {
+        string typeOfCard = getTypeOfCard( cardNumber );
+        cout << "Your " << typeOfCard << " is valid!" << endl;
+    } else {
+        cout << "Your card is invalid!" << endl;
+    }
     return EXIT_SUCCESS;
 }
 
@@ -25,9 +25,7 @@ bool isValid( string card ) {
     int cardSize = card.size();
     cout << cardSize << endl;
 
-    cerr << "Original card: " << card << endl;
-
-    if ( cardSize < 14 || cardSize > 15 ) {
+    if ( cardSize < 14 || cardSize > 16 ) {
         cerr << "Invalid card length." << endl;
         return false;
     }
@@ -39,38 +37,30 @@ bool isValid( string card ) {
             return false;
         }
     }
-
     
     return luhnsAlgo( card );
 }
 
 bool luhnsAlgo( string cardNum ) {
     int reducedCardSize = cardNum.size() - 1;
-    int checkValue = (int) cardNum.at( reducedCardSize ); // last digit
+    int checkValue = cardNum[reducedCardSize] - '0'; // last digit
     int totalValue;
 
     cardNum.pop_back();
 
     cardNum = reverseString( cardNum );
-    cerr << "Reversed card minus last: " << cardNum << endl;
     cardNum = multiplyOdds( cardNum );
-    cerr << "Multiplied odds is: " << cardNum << endl;
-
     totalValue = addAllValues( cardNum );
-    cerr << "The total of all numbers is " << totalValue << endl;
-
     if ( totalValue % 10 == checkValue ) {
-        cout << "Valid card!" << endl;
         return true;
     }
 
-    cout << "Invalid Card!" << endl;
     return false; //TODO: delete this
 }
 
 int addAllValues( string str ) {
     int total = 0;
-    for ( int i = 0 ; i < str.size()-1 ; ++i ) {
+    for ( int i = 0 ; i < str.size() ; ++i ) {
         total += str[i] - '0';
     }
     return total;
@@ -78,9 +68,9 @@ int addAllValues( string str ) {
 
 string multiplyOdds( string str ) {
     string multOddsStr;
-    for ( int i = 0 ; i < str.size()-1 ; ++i ) {
-        int strVal = str[i] - '0';
-        if ( strVal % 2 == 1 ) {
+    for ( int i = 1 ; i <= str.size() ; ++i ) {
+        int strVal = str[i-1] - '0';
+        if ( i % 2 == 1 ) {
             int doubleVal = strVal * 2;
             if ( doubleVal > 9 ) {
                 multOddsStr.append( to_string( doubleVal - 9 ) );
@@ -91,8 +81,25 @@ string multiplyOdds( string str ) {
             multOddsStr.append( to_string( strVal ) );
         }
     }
-    cerr << "multOddsStr: " << multOddsStr << endl;
     return multOddsStr;
+}
+
+string getTypeOfCard( string cardNumber ) {
+    char firstNum = cardNumber[0];
+    char secondNum = cardNumber[1];
+    if ( firstNum == '4' ) {
+        return "Visa";
+    } else if ( firstNum == '3' ) {
+        if ( secondNum == '4' || secondNum == '7' ) {
+            return "American Express";
+        }
+    } else if ( firstNum == '5' ) {
+        if ( secondNum >= '1' && secondNum <= '5' ) {
+            return "MasterCard";
+        }
+    }
+
+    return "Credit Card";
 }
 
 string reverseString( string str ) {
