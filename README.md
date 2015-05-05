@@ -13,3 +13,7 @@ succession and stored in a buffer using a queue. Additionally, each prime checke
 # Day 2 [5/2/2015]
 Had a late start today due to.. the Google Games!! It was a fun event put on by google and needless to say, I still have a lot more to learn about programming (and building towers with straws but thats a story for another day). Wow, this is turning into a blog now? I don't know how I feel about it.. Anyway! I tried to build a change giver that returns change from a given price and amount of money given. However, I've run into quite a bit of problems and less-than-ideal hard-coding
 approach to the change giving. I still need to work out the kinks but it's almost done.
+
+# Day 3 [5/3/2015]
+YES I KNOW I MISSED A DAY. Oh wells, it was bound to happen. I still have to work on the change-giver from 5/2, but today I finished working on a credit card accepter. Basically, it accepts all valid credit cards by using Luhn's algorithm to determine if it valid. It's also interactive so you can try it out! (No, I am not saving this data and trying to steal your credit card information .. xD) But, it was fun! Definitely getting better at C++, which was one of the main goals of
+this project--to practice and get comfortable creating easy projects that test a wide range of knowledge using languages I would otherwise be uncomfortable with. Enjoy! :)
