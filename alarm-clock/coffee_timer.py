@@ -1,7 +1,9 @@
 import os
 import time
+import webbrowser
 
-print 'Enter boiling time:  [format: MIN or MIN:SEC]'
+webbrowser.open('https://www.youtube.com/watch?v=wwyXQn9g40I')
+print 'Enter water cooling time:  [format: MIN or MIN:SEC]'
 boil_input = raw_input()
 if ':' in boil_input:
     boil_time = boil_input.split(':')
