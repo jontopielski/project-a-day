@@ -27,3 +27,7 @@ recursive and iterative implementations. Of course, the best way is to use itera
 # Day 5 [5/7/2015]
 For all you coffeelovers out there, I created a french press coffee program that has timers for many different aspects of the brewing process. For example, a timer that is in charge of the water boiling cooldown, to time how long it takes for the boiling water to reach 95-100 degree fahrenheit. It also accounts for the total time it takes for the water to infuse with the beans, along with 2 30 second incremental stirring reminders so you can stir at the most ideal times. Oh, and it
 also comes with voice activated reminders, so you can turn your volume up and focus on other things while your fresh pot of coffee is being made! :)
+
+# Day 6 [5/8/2015]
+Today, I created a pretty simply program: a coin flipper which flips a coin at each user request and displays the total number of flips. It wasn't too hard to implement, but I did it in python (a language I am very foreign in). Part of this simple project was inspired by a race my roommate and I had where he had to build a coin flipper in Java and I had to build it using an Arduino, and my roommate ultimately won (by the power of stack overflow). Anyways, it was fun and I
+encourage you to try my coin flipper!
