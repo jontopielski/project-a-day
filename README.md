@@ -31,3 +31,13 @@ also comes with voice activated reminders, so you can turn your volume up and fo
 # Day 6 [5/8/2015]
 Today, I created a pretty simply program: a coin flipper which flips a coin at each user request and displays the total number of flips. It wasn't too hard to implement, but I did it in python (a language I am very foreign in). Part of this simple project was inspired by a race my roommate and I had where he had to build a coin flipper in Java and I had to build it using an Arduino, and my roommate ultimately won (by the power of stack overflow). Anyways, it was fun and I
 encourage you to try my coin flipper!
+
+**Testing Different MarkDown features..**
+* Testing more MarkDown Features.. *
+_CoolBeans_
+
+# Day 7 [5/9/2015]
+Created a simple string reverser in C++. It was actually much easier than I thought, as the pointer walking seemed to just make sense. This is a pretty common question asked in interviews (if I recall correctly, it's one of the first in CTCI) so I thought it'd be a good idea to knock it down. As usual, this program is interactive, so it loops and asks for user input repeatedly. Planning to learn either bash scripting or python scripting in order to create unit tests for my programs to
+practice testing & scripting. We'll see..
+
+
