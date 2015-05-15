@@ -1,8 +1,6 @@
 import os
 import time
-import webbrowser
 
-webbrowser.open('https://www.youtube.com/watch?v=wwyXQn9g40I')
 print 'Enter water cooling time:  [format: MIN or MIN:SEC]'
 boil_input = raw_input()
 if ':' in boil_input:
@@ -29,12 +27,14 @@ total_steep_time = ( steep_min * 60 ) + steep_sec
 print 'Starting the Coffee Timer..'
 print 'Current Date/Time:', time.ctime()
 
+os.system( ' say "STARTING COFFEE TIMER WITH GRIND THIRTY TWO!" ' )
+
 while ( total_boil_time > 0 ):
     print 'Time left until done boiling:', total_boil_time
     time.sleep(1)
     total_boil_time -= 1
 
-os.system( ' say "YOUR WATER IS DONE BOILING!" ' )
+os.system( ' say "YOUR WATER IS READY FOR POURING " ' )
 
 steep_time_passed = 0
 while ( total_steep_time > 0 ):
@@ -42,8 +42,12 @@ while ( total_steep_time > 0 ):
     time.sleep(1)
     total_steep_time -= 1
     steep_time_passed += 1
-    if ( steep_time_passed == 30 or steep_time_passed == 60 ):
-        os.system( ' say "STIR THE COFFEE!" ' )
+    if ( steep_time_passed == 60 ):
+        os.system( ' say "POUR THE FUCKING WATER AND STIR THE COFFEE!" ' )
+    if ( steep_time_passed == 270 ):
+        os.system( ' say "THIRTY SECONDS LEFT. PREPARE THE CUPS!" ' )
 
-os.system( ' say "ENJOY YOUR COFFEE!" ' )
+    if ( steep_time_passed == 290 ):
+        os.system( ' say "TEN SECONDS REMAINING." ' )
 
+os.system( ' say "PRESS THE COFFEE AND ENJOY!" ' )

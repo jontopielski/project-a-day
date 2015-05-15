@@ -40,4 +40,5 @@ _CoolBeans_
 Created a simple string reverser in C++. It was actually much easier than I thought, as the pointer walking seemed to just make sense. This is a pretty common question asked in interviews (if I recall correctly, it's one of the first in CTCI) so I thought it'd be a good idea to knock it down. As usual, this program is interactive, so it loops and asks for user input repeatedly. Planning to learn either bash scripting or python scripting in order to create unit tests for my programs to
 practice testing & scripting. We'll see..
 
-
+# UPDATE [5/15/2015]
+So I haven't been able to keep up with the daily projects due to midterm week, but I'm hoping that it will pickup again next week!
